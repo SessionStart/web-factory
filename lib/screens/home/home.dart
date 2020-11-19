@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/widgets/custom/custom_drawer.dart';
+import 'package:flutter_firebase_site/widgets/common/custom_drawer.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_firebase_site/screens/home.dart';
 import 'package:flutter_firebase_site/widgets/nav_bar.dart';
