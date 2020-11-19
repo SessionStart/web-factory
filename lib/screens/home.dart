@@ -20,16 +20,10 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildLargeView(BuildContext context) {
-    final theme = Theme.of(context);
     return Center(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Text(
-          "SIMPLE FLUTTER WEB APP",
-          style: theme.textTheme.headline1.copyWith(
-            fontSize: ResponsiveHelper.respWidthSize(context, 0.06),
-          ),
-        ),
+        child: Text('S'),
       ),
     );
   }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../utils/responsive/responsive_helper.dart';
 
+/// Виджет , который имеет 3 состояния
+/// (Широкий, Средний, Маленький экраны)
 class ResponsiveView extends StatelessWidget {
   final Widget largeScreen;
   final Widget mediumScreen;
