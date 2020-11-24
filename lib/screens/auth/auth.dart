@@ -28,19 +28,19 @@ class AuthScreen extends StatelessWidget {
               padding: _getLargePadding(size),
               child: SizedBox(
                 width: size.width * 0.4,
-                child: _buildFromColumn(authBloc),
+                child: _buildFromColumn(authBloc, context),
               ),
             ),
             mediumScreen: Padding(
               padding: _getMediumPadding(size),
               child: SizedBox(
                 width: size.width * 0.5,
-                child: _buildFromColumn(authBloc),
+                child: _buildFromColumn(authBloc, context),
               ),
             ),
             smallScreen: Padding(
               padding: smallPadding,
-              child: _buildFromColumn(authBloc),
+              child: _buildFromColumn(authBloc, context),
             ),
           ),
         ),
@@ -62,32 +62,34 @@ class AuthScreen extends StatelessWidget {
     );
   }
 
-  Column _buildFromColumn(AuthBloc authBloc) {
+  Column _buildFromColumn(AuthBloc authBloc, BuildContext context) {
+    final theme = Theme.of(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        // todo: логотип
         // Image.asset('assets/img/FlutterWeb.png', height: 100),
         Padding(
           padding: const EdgeInsets.all(5.0).copyWith(right: 30.0),
           child: Column(
             children: [
               CustomTextField(
-                hintText: 'Login',
-                labelText: 'Login',
+                hintText: 'Логин',
+                labelText: 'Логин',
                 icon: FontAwesomeIcons.user,
                 controller: authBloc.loginController,
                 validator: (value) {
-                  if (value.isEmpty) return 'Empty login';
+                  if (value.isEmpty) return 'Логин не может быть пустым';
                 },
               ),
               const SizedBox(height: 30),
               CustomTextField(
-                hintText: 'Password',
-                labelText: 'Password',
+                hintText: 'Пароль',
+                labelText: 'Пароль',
                 icon: FontAwesomeIcons.lock,
                 controller: authBloc.passwordController,
                 validator: (value) {
-                  if (value.isEmpty) return 'Empty password';
+                  if (value.isEmpty) return 'Пароль не был введен';
                 },
               ),
             ],
@@ -95,11 +97,13 @@ class AuthScreen extends StatelessWidget {
         ),
         const SizedBox(height: 40),
         CustomButton(
-            child: Text(
-              'Login',
-              style: TextStyle(color: Colors.white),
-            ),
-            onPressed: () => print('auth button pressed')),
+          color: theme.accentColor,
+          child: Text(
+            'Войти',
+            style: theme.textTheme.button,
+          ),
+          onPressed: () => print('auth button pressed'),
+        ),
       ],
     );
   }

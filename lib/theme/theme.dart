@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 final appTheme = ThemeData(
-  primarySwatch: Colors.yellow,
-  primaryColor: Colors.yellow,
-  backgroundColor: Color(0xFFF5F6F8),
-  scaffoldBackgroundColor: Color(0xFFF5F6F8),
-  canvasColor: Colors.yellow,
+  primarySwatch: Colors.indigo,
+  primaryColor: Color(0xFF3922CB),
+  backgroundColor: Color(0xFF151515),
+  scaffoldBackgroundColor: Color(0xFF151515),
+  canvasColor: Color(0xFF3922CB),
+  accentColor: Color(0xFF3922CB),
+  cardColor: Color(0xFF262626),
   textTheme: TextTheme(
     headline1: TextStyle(
       fontSize: 92,
@@ -16,6 +18,11 @@ final appTheme = ThemeData(
       fontSize: 18,
       color: Colors.white,
       fontWeight: FontWeight.w300,
+    ),
+    button: TextStyle(
+      fontSize: 20,
+      color: Colors.white,
+      fontWeight: FontWeight.w500,
     ),
   ),
 );

@@ -48,51 +48,11 @@ class Home extends StatelessWidget {
       key: _scaffoldKey,
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints viewportConstraints) {
-          return SingleChildScrollView(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                minHeight: viewportConstraints.maxHeight,
-              ),
-              child: IntrinsicHeight(
-                child: Column(
-                  children: <Widget>[
-                    NavBar(
-                      titles: _titles,
-                      scaffoldKey: _scaffoldKey,
-                      selectedIndex: navigationBloc.selectedIndex,
-                      onItemSelected: (int index) =>
-                          navigationBloc.selectedIndex = index,
-                      style: theme.textTheme.headline3,
-                      selectedStyle: theme.textTheme.headline3.copyWith(
-                        color: theme.accentColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    Expanded(
-                      child: _buildScreen(
-                        navigationBloc.selectedIndex,
-                        _scaffoldKey,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+          return _buildScreen(
+            navigationBloc.selectedIndex,
+            _scaffoldKey,
           );
         },
-      ),
-      drawer: CustomDrawer(
-        titles: _titles,
-        selectedIndex: navigationBloc.selectedIndex,
-        onItemSelected: (int index) => navigationBloc.selectedIndex = index,
-        style: theme.textTheme.headline3.copyWith(
-          color: Colors.black,
-          fontWeight: FontWeight.w400,
-        ),
-        selectedStyle: theme.textTheme.headline3.copyWith(
-          fontWeight: FontWeight.w500,
-        ),
-        selectedBackgroundColor: theme.backgroundColor,
       ),
     );
   }
