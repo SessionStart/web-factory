@@ -19,6 +19,11 @@ final appTheme = ThemeData(
       color: Colors.white,
       fontWeight: FontWeight.w300,
     ),
+    headline4: TextStyle(
+      fontSize: 16,
+      color: Colors.white,
+      fontWeight: FontWeight.w400,
+    ),
     button: TextStyle(
       fontSize: 20,
       color: Colors.white,
