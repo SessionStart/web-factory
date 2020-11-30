@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_site/services/hive_service.dart';
 import 'theme/theme.dart';
 import 'widgets/common/launch_navigator.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final hiveService = HiveService();
+  await hiveService.configure();
   runApp(MyApp());
 }
 
