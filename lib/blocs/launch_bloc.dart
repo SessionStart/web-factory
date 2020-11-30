@@ -5,7 +5,7 @@ class LaunchBloc extends ChangeNotifier {
   AuthStatus get authStatus => _getAuthStatus();
 
   AuthStatus _getAuthStatus() {
-    return AuthStatus.Unauthorized;
+    return AuthStatus.Authorized;
   }
 
   LaunchPages get pagesTree => _getAuthStatus() == AuthStatus.Authorized
