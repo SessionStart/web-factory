@@ -78,7 +78,7 @@ class AuthScreen extends StatelessWidget {
                 labelText: 'Логин',
                 icon: FontAwesomeIcons.user,
                 controller: authBloc.loginController,
-                validator: (value) {
+                validator: (String value) {
                   if (value.isEmpty) return 'Логин не может быть пустым';
                 },
               ),
@@ -88,7 +88,7 @@ class AuthScreen extends StatelessWidget {
                 labelText: 'Пароль',
                 icon: FontAwesomeIcons.lock,
                 controller: authBloc.passwordController,
-                validator: (value) {
+                validator: (String value) {
                   if (value.isEmpty) return 'Пароль не был введен';
                 },
               ),

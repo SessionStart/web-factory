@@ -28,7 +28,16 @@ class HiveUserRepository extends AbstractUserRepository {
   }
 
   @override
-  User get user => _userBox.get(_userKey);
+  User get user {
+    if (_userBox.isNotEmpty) {
+      try {
+        return _userBox.get(_userKey);
+      } catch (e) {
+        rethrow;
+      }
+    }
+    return null;
+  }
 
   @override
   Stream<UserRepositoryEvent> get eventStream => _eventsController.stream;
