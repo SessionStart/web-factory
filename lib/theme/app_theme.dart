@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/theme/theme.dart';
+import 'package:web_factory/theme/theme.dart';
 
 abstract class AppTheme {
   static final boxShadow = [

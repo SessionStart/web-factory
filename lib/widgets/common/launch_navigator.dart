@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/blocs/launch_bloc.dart';
-import 'package:flutter_firebase_site/blocs/auth_bloc.dart';
-import 'package:flutter_firebase_site/blocs/navigation_bloc.dart';
-import 'package:flutter_firebase_site/screens/auth/auth.dart';
-import 'package:flutter_firebase_site/screens/common/in_creation_screen.dart';
-import 'package:flutter_firebase_site/screens/home/home.dart';
-import 'package:flutter_firebase_site/utils/enums.dart';
+import 'package:web_factory/blocs/launch_bloc.dart';
+import 'package:web_factory/blocs/auth_bloc.dart';
+import 'package:web_factory/blocs/navigation_bloc.dart';
+import 'package:web_factory/screens/auth/auth.dart';
+import 'package:web_factory/screens/common/in_creation_screen.dart';
+import 'package:web_factory/screens/home/home.dart';
+import 'package:web_factory/utils/enums.dart';
 import 'package:provider/provider.dart';
 
 class LaunchNavigator extends StatelessWidget {

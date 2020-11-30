@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/blocs/auth_bloc.dart';
-import 'package:flutter_firebase_site/widgets/common/custom_button.dart';
-import 'package:flutter_firebase_site/widgets/common/custom_text_field.dart';
-import 'package:flutter_firebase_site/widgets/responsive/responsive_view.dart';
+import 'package:web_factory/blocs/auth_bloc.dart';
+import 'package:web_factory/widgets/common/custom_button.dart';
+import 'package:web_factory/widgets/common/custom_text_field.dart';
+import 'package:web_factory/widgets/responsive/responsive_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 

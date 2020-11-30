@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter_firebase_site/data/repositories/user_repository/abstract_user_repository.dart';
-import 'package:flutter_firebase_site/data/repositories/user_repository/user_repository_events.dart';
-import 'package:flutter_firebase_site/models/user.dart';
+import 'package:web_factory/data/repositories/user_repository/abstract_user_repository.dart';
+import 'package:web_factory/data/repositories/user_repository/user_repository_events.dart';
+import 'package:web_factory/models/user.dart';
 import 'package:hive/hive.dart';
 
 class HiveUserRepository extends AbstractUserRepository {

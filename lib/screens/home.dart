@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/theme/app_theme.dart';
-import 'package:flutter_firebase_site/utils/responsive/responsive_helper.dart';
-import 'package:flutter_firebase_site/widgets/common/image/custom_image.dart';
-import 'package:flutter_firebase_site/widgets/responsive/responsive_view.dart';
+import 'package:web_factory/theme/app_theme.dart';
+import 'package:web_factory/utils/responsive/responsive_helper.dart';
+import 'package:web_factory/widgets/common/image/custom_image.dart';
+import 'package:web_factory/widgets/responsive/responsive_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({

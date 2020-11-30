@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_firebase_site/models/user.dart';
+import 'package:web_factory/models/user.dart';
 
 enum UserRepositoryEventType { Crated, Deleted, Updated }
 

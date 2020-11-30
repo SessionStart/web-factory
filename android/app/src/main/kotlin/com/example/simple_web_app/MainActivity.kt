@@ -1,4 +1,4 @@
-package com.example.flutter_firebase_site
+package com.example.web_factory
 
 import io.flutter.embedding.android.FlutterActivity
 

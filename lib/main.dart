@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/services/hive_service.dart';
+import 'package:web_factory/services/hive_service.dart';
 import 'package:provider/provider.dart';
 import 'blocs/launch_bloc.dart';
 import 'blocs/repository_bloc.dart';

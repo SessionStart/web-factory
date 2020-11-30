@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/widgets/responsive/responsive_view.dart';
+import 'package:web_factory/widgets/responsive/responsive_view.dart';
 
 import 'href_button.dart';
 

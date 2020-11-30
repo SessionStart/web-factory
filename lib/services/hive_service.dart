@@ -1,6 +1,6 @@
-import 'package:flutter_firebase_site/data/repositories/adapers/user_adapter.dart';
-import 'package:flutter_firebase_site/data/repositories/user_repository/abstract_user_repository.dart';
-import 'package:flutter_firebase_site/data/repositories/user_repository/hive_user_repository/hive_user_repository.dart';
+import 'package:web_factory/data/repositories/adapers/user_adapter.dart';
+import 'package:web_factory/data/repositories/user_repository/abstract_user_repository.dart';
+import 'package:web_factory/data/repositories/user_repository/hive_user_repository/hive_user_repository.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 

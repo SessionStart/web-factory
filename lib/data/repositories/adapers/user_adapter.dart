@@ -1,4 +1,4 @@
-import 'package:flutter_firebase_site/models/user.dart';
+import 'package:web_factory/models/user.dart';
 import 'package:hive/hive.dart';
 
 class UserAdapter extends TypeAdapter<User> {

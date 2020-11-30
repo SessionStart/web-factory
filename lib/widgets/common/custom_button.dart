@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/theme/app_theme.dart';
-import 'package:flutter_firebase_site/theme/theme.dart';
+import 'package:web_factory/theme/app_theme.dart';
+import 'package:web_factory/theme/theme.dart';
 import 'package:provider/provider.dart';
 
 class CustomButton extends StatelessWidget {

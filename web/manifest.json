@@ -1,6 +1,6 @@
 {
-    "name": "flutter_firebase_site",
-    "short_name": "flutter_firebase_site",
+    "name": "web_factory",
+    "short_name": "web_factory",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

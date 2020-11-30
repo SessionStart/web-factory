@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/data/repositories/user_repository/abstract_user_repository.dart';
-import 'package:flutter_firebase_site/models/interfaces/initializeble_interface.dart';
-import 'package:flutter_firebase_site/utils/enums.dart';
+import 'package:web_factory/data/repositories/user_repository/abstract_user_repository.dart';
+import 'package:web_factory/models/interfaces/initializeble_interface.dart';
+import 'package:web_factory/utils/enums.dart';
 
 class LaunchBloc extends ChangeNotifier implements Initializeble {
   LaunchBloc({@required AbstractUserRepository userRepository})

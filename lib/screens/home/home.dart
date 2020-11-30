@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/widgets/common/custom_drawer.dart';
+import 'package:web_factory/widgets/common/custom_drawer.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_firebase_site/screens/home.dart';
-import 'package:flutter_firebase_site/widgets/nav_bar.dart';
+import 'package:web_factory/screens/home.dart';
+import 'package:web_factory/widgets/nav_bar.dart';
 
 import '../../blocs/navigation_bloc.dart';
 import '../../screens/about.dart';

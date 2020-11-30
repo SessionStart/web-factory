@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_site/widgets/common/loading/loading_image_indicator.dart';
+import 'package:web_factory/widgets/common/loading/loading_image_indicator.dart';
 
 const defaultBorderRadius = BorderRadius.all(Radius.circular(10.0));
 
