@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_site/theme/app_theme.dart';
+import 'package:flutter_firebase_site/theme/theme.dart';
 import 'package:provider/provider.dart';
 
 class CustomButton extends StatelessWidget {
@@ -23,12 +25,12 @@ class CustomButton extends StatelessWidget {
       width: width,
       height: 50.0,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.0),
-        // gradient: appTheme.mainGradient,
-        // boxShadow: appTheme.shadow,
+        borderRadius: BorderRadius.circular(30.0),
+        gradient: AppTheme.mainGradient,
+        boxShadow: AppTheme.boxShadow,
       ),
       child: Material(
-        color: color,
+        color: Colors.transparent,
         child: InkWell(
           onTap: onPressed,
           child: Center(

@@ -7,6 +7,8 @@ final appTheme = ThemeData(
   scaffoldBackgroundColor: Color(0xFF151515),
   canvasColor: Color(0xFF3922CB),
   accentColor: Color(0xFF3922CB),
+  buttonColor: Color(0xFF2A2A72),
+  brightness: Brightness.dark,
   cardColor: Color(0xFF262626),
   textTheme: TextTheme(
     headline1: TextStyle(

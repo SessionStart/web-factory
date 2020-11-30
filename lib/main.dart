@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       builder: (ctx, _) {
-        // _initializeBlocs(ctx);
+        _initializeBlocs(ctx);
         return MaterialApp(
           title: 'Web Factory',
           debugShowCheckedModeBanner: false,
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  // Future<void> _initializeBlocs(BuildContext context) async {
-  //   Provider.of<LaunchBloc>(context).init(context);
-  // }
+  Future<void> _initializeBlocs(BuildContext context) async {
+    Provider.of<LaunchBloc>(context).init(context);
+  }
 }

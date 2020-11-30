@@ -70,7 +70,7 @@ class AuthScreen extends StatelessWidget {
         // todo: логотип
         // Image.asset('assets/img/FlutterWeb.png', height: 100),
         Padding(
-          padding: const EdgeInsets.all(5.0).copyWith(right: 30.0),
+          padding: const EdgeInsets.all(5.0),
           child: Column(
             children: [
               CustomTextField(
