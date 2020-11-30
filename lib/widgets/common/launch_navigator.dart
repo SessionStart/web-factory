@@ -15,22 +15,6 @@ class LaunchNavigator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<LaunchBloc>(
-          create: (context) => LaunchBloc(),
-        ),
-      ],
-      builder: (context, w) => _Page(),
-    );
-  }
-}
-
-class _Page extends StatelessWidget {
-  const _Page({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
     final launchBloc = Provider.of<LaunchBloc>(context);
 
     switch (launchBloc.pagesTree) {
@@ -51,7 +35,7 @@ class _Page extends StatelessWidget {
               create: (_) => AuthBloc(),
             ),
           ],
-          builder: (context, w) => AuthScreen(),
+          builder: (context, _) => AuthScreen(),
         );
         break;
       case LaunchPages.Onboarding:

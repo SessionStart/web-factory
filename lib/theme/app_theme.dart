@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_site/theme/theme.dart';
 
 abstract class AppTheme {
   static final boxShadow = [
@@ -12,4 +13,13 @@ abstract class AppTheme {
       ),
     ),
   ];
+
+  static final mainGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: <Color>[
+      appTheme.accentColor,
+      appTheme.buttonColor,
+    ],
+  );
 }

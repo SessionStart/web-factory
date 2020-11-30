@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_site/theme/app_theme.dart';
+import 'package:flutter_firebase_site/theme/theme.dart';
 import 'package:provider/provider.dart';
 
 class CustomButton extends StatelessWidget {
@@ -19,18 +21,18 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: 50.0,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.0),
-        // gradient: appTheme.mainGradient,
-        // boxShadow: appTheme.shadow,
-      ),
-      child: Material(
-        color: color,
-        child: InkWell(
-          onTap: onPressed,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        width: width,
+        height: 50.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30.0),
+          gradient: AppTheme.mainGradient,
+          boxShadow: AppTheme.boxShadow,
+        ),
+        child: Material(
+          color: Colors.transparent,
           child: Center(
             child: child,
           ),

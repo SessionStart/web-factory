@@ -70,7 +70,7 @@ class AuthScreen extends StatelessWidget {
         // todo: логотип
         // Image.asset('assets/img/FlutterWeb.png', height: 100),
         Padding(
-          padding: const EdgeInsets.all(5.0).copyWith(right: 30.0),
+          padding: const EdgeInsets.all(5.0),
           child: Column(
             children: [
               CustomTextField(
@@ -78,7 +78,7 @@ class AuthScreen extends StatelessWidget {
                 labelText: 'Логин',
                 icon: FontAwesomeIcons.user,
                 controller: authBloc.loginController,
-                validator: (value) {
+                validator: (String value) {
                   if (value.isEmpty) return 'Логин не может быть пустым';
                 },
               ),
@@ -88,7 +88,7 @@ class AuthScreen extends StatelessWidget {
                 labelText: 'Пароль',
                 icon: FontAwesomeIcons.lock,
                 controller: authBloc.passwordController,
-                validator: (value) {
+                validator: (String value) {
                   if (value.isEmpty) return 'Пароль не был введен';
                 },
               ),
