@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 final appTheme = ThemeData(
   primarySwatch: Colors.indigo,
-  primaryColor: Color(0xFF3922CB),
+  primaryColor: Color(0xFF4D5DFB),
   backgroundColor: Color(0xFF151515),
   scaffoldBackgroundColor: Color(0xFF151515),
-  canvasColor: Color(0xFF3922CB),
-  accentColor: Color(0xFF3922CB),
-  buttonColor: Color(0xFF2A2A72),
+  canvasColor: Color(0xFF4D5DFB),
+  accentColor: Color(0xFF4D5DFB),
+  buttonColor: Color(0xFF08C8F6),
   brightness: Brightness.dark,
   cardColor: Color(0xFF262626),
   textTheme: TextTheme(

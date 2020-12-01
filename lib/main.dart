@@ -3,7 +3,9 @@ import 'package:web_factory/services/hive_service.dart';
 import 'package:provider/provider.dart';
 import 'blocs/launch_bloc.dart';
 import 'blocs/repository_bloc.dart';
-import 'theme/theme.dart';
+import 'blocs/theme_bloc.dart';
+import 'theme/custom_themes/dark_app_theme.dart';
+import 'theme/themes/dark_theme.dart';
 import 'widgets/common/launch_navigator.dart';
 
 void main() async {
@@ -31,6 +33,11 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<LaunchBloc>(
           create: (_) => LaunchBloc(
             userRepository: hiveService.userRepository,
+          ),
+        ),
+        ChangeNotifierProvider<ThemeBloc>(
+          create: (_) => ThemeBloc(
+            customTheme: DarkAppTheme(),
           ),
         ),
       ],
