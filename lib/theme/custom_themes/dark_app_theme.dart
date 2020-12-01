@@ -22,8 +22,8 @@ class DarkAppTheme implements AbstractCustomTheme {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: <Color>[
-          appTheme.buttonColor,
-          appTheme.accentColor,
+          darkTheme.buttonColor,
+          darkTheme.accentColor,
         ],
       );
 }

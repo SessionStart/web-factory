@@ -20,23 +20,18 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final customTheme = Provider.of<ThemeBloc>(context).customTheme;
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: width,
-        height: 50.0,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.0),
-          gradient: customTheme.mainGradient,
-          boxShadow: customTheme.boxShadow,
+    return SizedBox(
+      width: width,
+      height: height,
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+          side: BorderSide(color: color),
         ),
-        child: Material(
-          color: Colors.transparent,
-          child: Center(
-            child: child,
-          ),
-        ),
+        onPressed: onPressed,
+        color: color,
+        textColor: Colors.white,
+        child: child,
       ),
     );
   }

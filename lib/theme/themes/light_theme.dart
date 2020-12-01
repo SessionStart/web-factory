@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'mutual_theme.dart';
 
-final darkTheme = ThemeData(
+final lightTheme = ThemeData(
   primarySwatch: Colors.indigo,
   primaryColor: primaryColor,
-  backgroundColor: Color(0xFF151515),
-  scaffoldBackgroundColor: Color(0xFF151515),
+  backgroundColor: Color(0xFFFFFFFF),
+  scaffoldBackgroundColor: Color(0xFFFFFFFF),
   canvasColor: canvasColor,
   accentColor: accentColor,
   buttonColor: buttonColor,
-  brightness: Brightness.dark,
-  cardColor: Color(0xFF262626),
+  brightness: Brightness.light,
+  cardColor: Color(0xFFFFFFFF),
   textTheme: TextTheme(
     headline1: TextStyle(
       fontSize: 92,
-      color: Colors.white,
+      color: Colors.black,
       fontWeight: FontWeight.w900,
     ),
     headline3: TextStyle(
