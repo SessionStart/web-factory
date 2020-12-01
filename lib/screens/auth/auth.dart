@@ -67,8 +67,8 @@ class AuthScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // todo: логотип
-        // Image.asset('assets/img/FlutterWeb.png', height: 100),
+        Image.asset('assets/img/SCADA.png', height: 100),
+        SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.all(5.0),
           child: Column(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:web_factory/theme/app_theme.dart';
+import 'package:provider/provider.dart';
+import 'package:web_factory/blocs/theme_bloc.dart';
+import 'package:web_factory/theme/custom_themes/dark_app_theme.dart';
 import 'package:web_factory/utils/responsive/responsive_helper.dart';
 import 'package:web_factory/widgets/common/image/custom_image.dart';
 import 'package:web_factory/widgets/responsive/responsive_view.dart';
@@ -22,6 +24,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildLargeView(BuildContext context) {
+    final customTheme = Provider.of<ThemeBloc>(context).customTheme;
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
     return Padding(
@@ -40,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     color: theme.cardColor,
-                    boxShadow: AppTheme.boxShadow,
+                    boxShadow: customTheme.boxShadow,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -77,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     color: theme.cardColor,
-                    boxShadow: AppTheme.boxShadow,
+                    boxShadow: customTheme.boxShadow,
                   ),
                 );
               },

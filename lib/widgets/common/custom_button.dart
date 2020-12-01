@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_factory/theme/app_theme.dart';
-import 'package:web_factory/theme/theme.dart';
 import 'package:provider/provider.dart';
+import 'package:web_factory/blocs/theme_bloc.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -21,22 +20,18 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: width,
-        height: 50.0,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.0),
-          gradient: AppTheme.mainGradient,
-          boxShadow: AppTheme.boxShadow,
+    return SizedBox(
+      width: width,
+      height: height,
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+          side: BorderSide(color: color),
         ),
-        child: Material(
-          color: Colors.transparent,
-          child: Center(
-            child: child,
-          ),
-        ),
+        onPressed: onPressed,
+        color: color,
+        textColor: Colors.white,
+        child: child,
       ),
     );
   }

@@ -42,7 +42,7 @@ class NavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _buildBurger(context),
-            Image.asset('assets/img/FlutterWeb.png', width: 160, height: 35),
+            Image.asset('assets/img/SCADA.png', width: 160, height: 35),
           ],
         ),
       ),
@@ -61,7 +61,7 @@ class NavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/img/FlutterWeb.png', width: 160, height: 35),
+            Image.asset('assets/img/SCADA.png', width: 160, height: 35),
             Row(children: _buildButtons()),
           ],
         ),

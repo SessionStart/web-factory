@@ -57,7 +57,7 @@ class CustomDrawer extends StatelessWidget {
       child: InkWell(
         onTap: () => onItemSelected(0),
         child: Image.asset(
-          'assets/img/FlutterWeb.png',
+          'assets/img/SCADA.png',
           width: 160,
           height: 35,
         ),

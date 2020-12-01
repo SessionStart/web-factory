@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-final appTheme = ThemeData(
+import 'mutual_theme.dart';
+
+final darkTheme = ThemeData(
   primarySwatch: Colors.indigo,
-  primaryColor: Color(0xFF3922CB),
+  primaryColor: primaryColor,
   backgroundColor: Color(0xFF151515),
   scaffoldBackgroundColor: Color(0xFF151515),
-  canvasColor: Color(0xFF3922CB),
-  accentColor: Color(0xFF3922CB),
-  buttonColor: Color(0xFF2A2A72),
+  canvasColor: canvasColor,
+  accentColor: accentColor,
+  buttonColor: buttonColor,
   brightness: Brightness.dark,
   cardColor: Color(0xFF262626),
   textTheme: TextTheme(
