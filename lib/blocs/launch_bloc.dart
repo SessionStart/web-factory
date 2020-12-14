@@ -19,9 +19,10 @@ class LaunchBloc extends ChangeNotifier implements Initializeble {
     }
   }
 
-  LaunchPages get pagesTree => _getAuthStatus() == AuthStatus.Authorized
-      ? LaunchPages.Home
-      : LaunchPages.Auth;
+  LaunchPages get pagesTree => //_getAuthStatus() == AuthStatus.Authorized
+      //? 
+      LaunchPages.Home;
+      //: LaunchPages.Auth;
 
   @override
   void init(BuildContext context) {
