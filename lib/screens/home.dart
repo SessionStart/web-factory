@@ -165,8 +165,8 @@ class HomeScreen extends StatelessWidget {
                               borderRadius: BorderRadius.all(Radius.circular(8.0)),
                           ),
                           Container(
-                            width: 150,
-                            height: 60,
+                            width: 100,
+                            height: 30,
                             alignment: Alignment.topCenter,
                             padding: EdgeInsets.only(top: 5.0),
                             child: Text('Название')
