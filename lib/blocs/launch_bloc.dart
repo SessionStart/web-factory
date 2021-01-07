@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_factory/data/repositories/user_repository/abstract_user_repository.dart';
+import 'package:web_factory/data/repositories/user_repository/user_repository_events.dart';
 import 'package:web_factory/models/interfaces/initializeble_interface.dart';
 import 'package:web_factory/utils/enums.dart';
 
@@ -19,13 +20,15 @@ class LaunchBloc extends ChangeNotifier implements Initializeble {
     }
   }
 
-  LaunchPages get pagesTree => //_getAuthStatus() == AuthStatus.Authorized
-      //? 
-      LaunchPages.Home;
-      //: LaunchPages.Auth;
+  LaunchPages get pagesTree =>
+      authStatus == AuthStatus.Authorized ? LaunchPages.Home : LaunchPages.Auth;
 
   @override
   void init(BuildContext context) {
-    _userRepository.eventStream.listen((event) {});
+    _userRepository.eventStream.listen((event) {
+      if (event.type == UserRepositoryEventType.Crated) {
+        notifyListeners();
+      }
+    });
   }
 }

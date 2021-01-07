@@ -6,6 +6,7 @@ import 'package:web_factory/models/user.dart';
 import 'package:hive/hive.dart';
 
 class HiveUserRepository extends AbstractUserRepository {
+
   final _repositoryKey = 'HiveUserStore';
   final _userKey = 'HiveUserStore_UserKey';
   Box<User> _userBox;
