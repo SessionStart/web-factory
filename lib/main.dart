@@ -5,7 +5,6 @@ import 'blocs/launch_bloc.dart';
 import 'blocs/repository_bloc.dart';
 import 'blocs/theme_bloc.dart';
 import 'theme/custom_themes/dark_app_theme.dart';
-import 'theme/themes/dark_theme.dart';
 import 'theme/themes/light_theme.dart';
 import 'widgets/common/launch_navigator.dart';
 
@@ -16,6 +15,8 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
+        //TODO: во всех местах использовать
+        //репозиторий из бока репозиториев
         ChangeNotifierProvider<RepositoryBloc>(
           create: (_) => RepositoryBloc(
             userRepository: hiveService.userRepository,
@@ -56,7 +57,9 @@ class MyApp extends StatelessWidget {
           title: 'Web Factory',
           debugShowCheckedModeBanner: false,
           theme: themeData,
-          home: LaunchNavigator(),
+          home: LaunchNavigator(
+            userRepository: hiveService.userRepository,
+          ),
         );
       },
     );
