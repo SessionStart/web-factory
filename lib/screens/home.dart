@@ -74,10 +74,15 @@ class HomeScreen extends StatelessWidget {
                                 color: theme.accentColor,
                                 boxShadow: customTheme.boxShadow,
                               ),
-                              child: Text(
-                                'Название/номер',
-                                style: theme.textTheme.headline3,
-                              ),
+                              child: 
+                                Padding(
+                                  padding: EdgeInsets.only(bottom: 8),
+                                  child: Text(
+                                    'Название/номер',
+                                    style: theme.textTheme.headline3,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
                             ),
                             Container(
                               width: size.width * 433 / 1440,
@@ -116,13 +121,50 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Container(
-                              padding: EdgeInsets.only(left: size.width * 21 / 160),
-                              child: Text('Название'),
-                            )
+                            Padding(
+                              padding: EdgeInsets.only(left: 10.0, bottom: 10.0),
+                              child: Text('Все сообщения',
+                                style: theme.textTheme.headline5,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 30.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text('Ошибка'),
+                                      Text(' | '),
+                                      Text('9:34:48'),
+                                      Text(' | '),
+                                      Text('Иванов Иван'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Запуск'),
+                                      Text(' | '),
+                                      Text('9:01:32'),
+                                      Text(' | '),
+                                      Text('Иванов Иван'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Остановка'),
+                                      Text(' | '),
+                                      Text('19:57:02'),
+                                      Text(' | '),
+                                      Text('Иванов Иван'),],
+                                  ),
+                                ]
+                              )
+                            ),
                           ],
                         ),
                       ],
@@ -142,10 +184,10 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (BuildContext context, int i) {
                 return Container(
                   //height: size.height * 451 / 1440,
-                  padding: EdgeInsets.all(5.0),
+                  padding: EdgeInsets.all(10.0),
                   margin: i == 0
-                      ? EdgeInsets.all(5.0).copyWith(top: 0)
-                      : EdgeInsets.all(5.0),
+                      ? EdgeInsets.all(10.0).copyWith(top: 0)
+                      : EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     color: theme.cardColor,
@@ -156,8 +198,44 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CustomNetworkImage(
+                          Flexible(
+                            flex: 1,
+                            child: CustomNetworkImage(
+                              width: size.width * 61 / 480,
+                              height: size.height / 8,
+                              url:
+                                  'https://ritm-magazine.ru/sites/default/files/stc_f2501.jpg',
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                            ),
+                          ),
+                          Flexible(
+                            flex: 1,
+                            child: Container(
+                              width: 150,
+                              height: 50,
+                              alignment: Alignment.topCenter,
+                              padding: EdgeInsets.only(left: 15.0),
+                              child: Container(
+                                alignment: Alignment.topCenter,
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: 10.0),
+                                  child: Text(
+                                    'Название',
+                                    style: theme.textTheme.headline3,
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                  color: theme.accentColor,
+                                  boxShadow: customTheme.boxShadow,
+                                )
+                              )
+                            //Text('Название')
+                            ),
+                          ),
+                          /*CustomNetworkImage(
                           width: size.width * 61 / 480,
                           height: size.height / 8,
                           url:
@@ -169,22 +247,45 @@ class HomeScreen extends StatelessWidget {
                             height: 30,
                             alignment: Alignment.topCenter,
                             padding: EdgeInsets.only(top: 5.0),
-                            child: Text('Название')
-                          ),
+                            child: Container(
+                              alignment: Alignment.topCenter,
+                              child: Text('Название'),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                color: theme.accentColor,
+                                boxShadow: customTheme.boxShadow,
+                              )
+                            )
+                            //Text('Название')
+                          ),*/
                         ],
                       ),
                       Container(
                         width: size.width * 137 / 480,
-                        padding: EdgeInsets.all(5.0),
-                        child: CustomButton(
+                        padding: EdgeInsets.only(top: size.height * 49.0/1024.0),
+                        child: Padding(
+                          padding: EdgeInsets.all(0.0),
+                          child: CustomButton(
+                            height: size.height * 23 / 256,
+                            width: size.width * 400 / 1440,
+                            color: theme.accentColor,
+                            child: Text(
+                              'Остановить',
+                              style: theme.textTheme.headline4,
+                              ),
+                            onPressed: () => print('stop button pressed'),
+                          ),
+                        ),
+                        /*child: CustomButton(
                           height: size.height * 23 / 256,
+                          width: size.width * 411 / 1440,
                           color: theme.accentColor,
                           child: Text(
                             'Остановить',
                             style: theme.textTheme.headline4,
                             ),
                           onPressed: () => print('stop button pressed'),
-                        )
+                        )*/
                       ),
                     ],
                   ),
