@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'blocs/launch_bloc.dart';
 import 'blocs/repository_bloc.dart';
 import 'blocs/theme_bloc.dart';
-import 'theme/custom_themes/dark_app_theme.dart';
+import 'theme/custom_themes/light_app_theme.dart';
 import 'theme/themes/light_theme.dart';
 import 'widgets/common/launch_navigator.dart';
 
@@ -24,7 +24,7 @@ void main() async {
         ),
         ChangeNotifierProvider<ThemeBloc>(
           create: (_) => ThemeBloc(
-            customTheme: DarkAppTheme(),
+            customTheme: LightAppTheme(),
             themeData: lightTheme,
           ),
         ),

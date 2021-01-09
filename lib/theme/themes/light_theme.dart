@@ -6,7 +6,7 @@ final lightTheme = ThemeData(
   primarySwatch: Colors.indigo,
   primaryColor: primaryColor,
   backgroundColor: Color(0xFFFFFFFF),
-  scaffoldBackgroundColor: Color(0xFFFFFFFF),
+  scaffoldBackgroundColor: Color(0xFFF6F8FF),
   canvasColor: canvasColor,
   accentColor: accentColor,
   buttonColor: buttonColor,
