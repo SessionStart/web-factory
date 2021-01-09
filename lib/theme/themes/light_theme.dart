@@ -28,6 +28,11 @@ final lightTheme = ThemeData(
       color: Colors.white,
       fontWeight: FontWeight.w400,
     ),
+    headline5: TextStyle(
+      fontSize: 18,
+      color: Colors.black,
+      fontWeight: FontWeight.w600,
+    ),
     button: TextStyle(
       fontSize: 20,
       color: Colors.white,
