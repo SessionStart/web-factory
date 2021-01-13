@@ -46,7 +46,10 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.zero,
               itemCount: 1,
               itemBuilder: (BuildContext context, int i) {
-                return MachineCard();
+                return Padding(
+                  padding: i != 0 ? EdgeInsets.all(10.0) : EdgeInsets.all(10.0).copyWith(top: 0.0),
+                  child: MachineCard(),
+                );
               },
             ),
           ),
@@ -54,21 +57,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
-  Widget _smallScreenView(BuildContext context) {
-    final theme = Theme.of(context);
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Text(
-          "S",
-          style: theme.textTheme.headline1.copyWith(
-            fontSize: ResponsiveHelper.respWidthSize(context, 0.13),
-          ),
-        ),
-      ),
-    );
-  }
 }
-
-

@@ -16,8 +16,6 @@ class MachineCard extends StatelessWidget {
     final theme = Theme.of(context);
     return Container(
       padding: EdgeInsets.all(10.0),
-      //TODO: проверка isFirst
-      margin: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(8.0)),
         color: theme.cardColor,
@@ -30,60 +28,49 @@ class MachineCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Flexible(
-                flex: 1,
-                child: CustomNetworkImage(
-                  width: size.width * 61 / 480,
-                  height: size.height / 8,
-                  url:
-                  'https://ritm-magazine.ru/sites/default/files/stc_f2501.jpg',
-                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                ),
-              ),
-              Flexible(
-                flex: 1,
-                child: Container(
+              Column(
+                children: [
+                  CustomNetworkImage(
+                    width: size.width * 0.1,
+                    height: 100,
+                    url:
+                        'https://ritm-magazine.ru/sites/default/files/stc_f2501.jpg',
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                  ),
+                  Container(
                     width: 150,
                     height: 50,
                     alignment: Alignment.topCenter,
                     padding: EdgeInsets.only(left: 15.0),
                     child: Container(
-                        alignment: Alignment.topCenter,
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 10.0),
-                          child: Text(
-                            'Название',
-                            style: theme.textTheme.headline3,
-                          ),
+                      alignment: Alignment.topCenter,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Text(
+                          'Название',
+                          style: theme.textTheme.headline3,
                         ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                          color: theme.accentColor,
-                          boxShadow: customTheme.listViewBoxShadow,
-                        )
-                    )
-                  //Text('Название')
-                ),
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        color: theme.accentColor,
+                        boxShadow: customTheme.listViewBoxShadow,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-
             ],
           ),
-          Container(
-            width: size.width * 137 / 480,
-            padding: EdgeInsets.only(top: size.height * 49.0/1024.0),
-            child: Padding(
-              padding: EdgeInsets.all(0.0),
-              child: CustomButton(
-                height: size.height * 23 / 256,
-                width: size.width * 400 / 1440,
-                color: theme.accentColor,
-                child: Text(
-                  'Остановить',
-                  style: theme.textTheme.headline4,
-                ),
-                onPressed: () => print('stop button pressed'),
-              ),
+          CustomButton(
+            height: 40,
+            width: double.infinity,
+            color: theme.accentColor,
+            child: Text(
+              'Остановить',
+              style: theme.textTheme.headline4,
             ),
+            onPressed: () => print('stop button pressed'),
           ),
         ],
       ),
