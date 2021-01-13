@@ -1,6 +1,7 @@
-{
-  "1": {
-    "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+[
+  {
+    "id": 0,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "milling cutter",
     "serialNumber": "AA-9999-ZZZZ",
     "params": {
@@ -11,13 +12,14 @@
       "temperature": 25,
       "rpm": 0
     },
-    "warnings": {
-      "0": "raw is low"
-    },
+    "warnings": [
+       "raw is low"
+    ],
     "criticalErrors": {}
   },
-  "2": {
-    "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+  {
+    "id": 1,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "milling cutter",
     "serialNumber": "BB-8888-ZZZZ",
     "params": {
@@ -28,11 +30,12 @@
       "temperature": 140,
       "rpm": 5000
     },
-    "warnings": {},
+    "warnings": [],
     "criticalErrors": {}
   },
-  "3": {
-    "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+  {
+    "id": 2,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "drill machine",
     "serialNumber": "SS-8585-RRWW",
     "params": {
@@ -43,13 +46,14 @@
       "temperature": 400,
       "rpm": 0
     },
-    "warnings": {},
+    "warnings": [],
     "criticalErrors": {
       "0": "critical temperature"
     }
   },
-  "4": {
-    "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+  {
+    "id": 3,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "lathe",
     "serialNumber": "HH-1010-PPPP",
     "params": {
@@ -60,11 +64,12 @@
       "temperature": 100,
       "rpm": 10000
     },
-    "warnings": {},
+    "warnings": [],
     "criticalErrors": {}
   },
-  "5": {
-    "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+  {
+    "id": 4,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "lathe",
     "serialNumber": "LK-8900-IIII",
     "params": {
@@ -75,11 +80,12 @@
       "temperature": 25,
       "rpm": 0
     },
-    "warnings": {},
+    "warnings": [],
     "criticalErrors": {}
   },
-  "6": {
-    "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+  {
+    "id": 5,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "rolling machine",
     "serialNumber": "OP-2500-POIU",
     "params": {
@@ -90,9 +96,9 @@
       "temperature": 50,
       "rpm": 2500
     },
-    "warnings": {
-      "0": "maintenance required"
-    },
+    "warnings": [
+      "maintenance required"
+    ],
     "criticalErrors": {}
   }
-}
+]

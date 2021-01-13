@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web_factory/blocs/launch_bloc.dart';
 import 'package:web_factory/blocs/auth_bloc.dart';
 import 'package:web_factory/blocs/navigation_bloc.dart';
+import 'package:web_factory/data/repositories/machines_repository/repository.dart';
 import 'package:web_factory/data/repositories/user_repository/abstract_user_repository.dart';
 import 'package:web_factory/data/repositories/user_repository/hive_user_repository/hive_user_repository.dart';
 import 'package:web_factory/screens/auth/auth.dart';
@@ -23,6 +24,13 @@ class LaunchNavigator extends StatefulWidget {
 }
 
 class _LaunchNavigatorState extends State<LaunchNavigator> {
+
+  @override
+  void initState() {
+    _loadMachines();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final launchBloc = Provider.of<LaunchBloc>(context);
@@ -56,5 +64,10 @@ class _LaunchNavigatorState extends State<LaunchNavigator> {
       default:
         return InCreationScreen();
     }
+  }
+
+  Future _loadMachines() async{
+    final machinesRepository = MockMachinesRepository();
+    final machines = await machinesRepository.loadFromFile();
   }
 }
