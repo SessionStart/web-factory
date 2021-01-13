@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_factory/blocs/launch_bloc.dart';
 import 'package:web_factory/blocs/auth_bloc.dart';
+import 'package:web_factory/blocs/machines_bloc.dart';
 import 'package:web_factory/blocs/navigation_bloc.dart';
 import 'package:web_factory/data/repositories/machines_repository/repository.dart';
 import 'package:web_factory/data/repositories/user_repository/abstract_user_repository.dart';
@@ -24,10 +25,8 @@ class LaunchNavigator extends StatefulWidget {
 }
 
 class _LaunchNavigatorState extends State<LaunchNavigator> {
-
   @override
   void initState() {
-    _loadMachines();
     super.initState();
   }
 
@@ -39,8 +38,10 @@ class _LaunchNavigatorState extends State<LaunchNavigator> {
       case LaunchPages.Home:
         return MultiProvider(
           providers: [
-            ChangeNotifierProvider<NavigationBloc>(
-              create: (_) => NavigationBloc(),
+            ChangeNotifierProvider<MachinesBloc>(
+              create: (_) => MachinesBloc(
+                machinesRepository: MockMachinesRepository(),
+              )..init(context),
             ),
           ],
           builder: (context, w) => Home(),
@@ -64,10 +65,5 @@ class _LaunchNavigatorState extends State<LaunchNavigator> {
       default:
         return InCreationScreen();
     }
-  }
-
-  Future _loadMachines() async{
-    final machinesRepository = MockMachinesRepository();
-    final machines = await machinesRepository.loadFromFile();
   }
 }
