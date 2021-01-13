@@ -48,7 +48,7 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
   @override
   Future<void> init(BuildContext context) async {
     await loadMachines();
-
+    startTimer();
   }
 
   void startTimer() {

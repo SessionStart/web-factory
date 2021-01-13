@@ -23,8 +23,10 @@ class MachineCard extends StatelessWidget {
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(8.0)),
-        color:  theme.cardColor,
-        boxShadow: machie?.params?.isRunning ? customTheme.boxShadow : listViewBoxShadow,
+        color: theme.cardColor,
+        boxShadow: machie?.params?.isRunning
+            ? customTheme.boxShadow
+            : listViewBoxShadow,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -37,51 +39,86 @@ class MachineCard extends StatelessWidget {
                 url: machie?.photoUrl,
                 borderRadius: BorderRadius.all(Radius.circular(8.0)),
               ),
-              Padding(
-                padding: EdgeInsets.all(5).copyWith(bottom: 0.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.label,
-                      size: 18,
-                      color: machie?.params?.isRunning
-                          ? theme.primaryColor
-                          : alertColor,
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(5).copyWith(bottom: 0.0),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.label,
+                          size: 18,
+                          color: machie?.params?.isRunning
+                              ? theme.primaryColor
+                              : alertColor,
+                        ),
+                        SizedBox(width: 5.0),
+                        Text(
+                          machie?.serialNumber,
+                          style: theme.textTheme.headline3.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 5.0),
-                    Text(
-                      machie?.serialNumber,
-                      style: theme.textTheme.headline3.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color:  Colors.black,
-                      ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.label,
+                          size: 18,
+                          color: machie?.params?.isRunning
+                              ? theme.primaryColor
+                              : alertColor,
+                        ),
+                        SizedBox(width: 5.0),
+                        Text(
+                          machie?.type,
+                          style: theme.textTheme.headline3.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.all(5),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.label,
-                      size: 18,
-                      color: machie?.params?.isRunning
-                          ? theme.primaryColor
-                          : alertColor,
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(5).copyWith(bottom: 0.0),
+                    child: Row(
+                      children: [
+                        Icon(
+                          machie?.params?.isRunning
+                              ? Icons.check
+                              : Icons.warning,
+                          size: 18,
+                          color: machie?.params?.isRunning
+                              ? theme.primaryColor
+                              : alertColor,
+                        ),
+                        SizedBox(width: 5.0),
+                        Text(
+                          machie?.params?.isRunning
+                              ? 'Работает'
+                              : 'Возникла ошибка',
+                          style: theme.textTheme.headline3.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 5.0),
-                    Text(
-                      machie?.type,
-                      style: theme.textTheme.headline3.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color:  Colors.black,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

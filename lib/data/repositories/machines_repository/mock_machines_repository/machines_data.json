@@ -7,7 +7,7 @@
     "params": {
       "machineTime": 0,
       "downtime": 5000,
-      "isRunning": 0,
+      "isRunning": 1,
       "toggleExhaustVentilation": 0,
       "temperature": 25,
       "rpm": 0
@@ -41,7 +41,7 @@
     "params": {
       "machineTime": 0,
       "downtime": 5000,
-      "isRunning": 0,
+      "isRunning": 1,
       "toggleExhaustVentilation": 1,
       "temperature": 400,
       "rpm": 0
@@ -75,7 +75,7 @@
     "params": {
       "machineTime": 0,
       "downtime": 4000,
-      "isRunning": 0,
+      "isRunning": 1,
       "toggleExhaustVentilation": 0,
       "temperature": 25,
       "rpm": 0
