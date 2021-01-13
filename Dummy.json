@@ -2,97 +2,97 @@
   "1": {
     "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "milling cutter",
-    "serial number": "AA-9999-ZZZZ",
-    "Params": {
-      "machine time": 0,
+    "serialNumber": "AA-9999-ZZZZ",
+    "params": {
+      "machineTime": 0,
       "downtime": 5000,
-      "is running": 0,
-      "toggle exhaust ventilation": 0,
+      "isRunning": 0,
+      "toggleExhaustVentilation": 0,
       "temperature": 25,
-      "RPM": 0
+      "rpm": 0
     },
-    "Warnings": {
+    "warnings": {
       "0": "raw is low"
     },
-    "Critical errors": {}
+    "criticalErrors": {}
   },
   "2": {
     "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "milling cutter",
-    "serial number": "BB-8888-ZZZZ",
-    "Params": {
-      "machine time": 1400,
+    "serialNumber": "BB-8888-ZZZZ",
+    "params": {
+      "machineTime": 1400,
       "downtime": 0,
-      "is running": 1,
-      "toggle exhaust ventilation": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
       "temperature": 140,
-      "RPM": 5000
+      "rpm": 5000
     },
-    "Warnings": {},
-    "Critical errors": {}
+    "warnings": {},
+    "criticalErrors": {}
   },
   "3": {
     "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "drill machine",
-    "serial number": "SS-8585-RRWW",
-    "Params": {
-      "machine time": 0,
+    "serialNumber": "SS-8585-RRWW",
+    "params": {
+      "machineTime": 0,
       "downtime": 5000,
-      "is running": 0,
-      "toggle exhaust ventilation": 1,
+      "isRunning": 0,
+      "toggleExhaustVentilation": 1,
       "temperature": 400,
-      "RPM": 0
+      "rpm": 0
     },
-    "Warnings": {},
-    "Critical errors": {
+    "warnings": {},
+    "criticalErrors": {
       "0": "critical temperature"
     }
   },
   "4": {
     "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "lathe",
-    "serial number": "HH-1010-PPPP",
-    "Params": {
-      "machine time": 10000,
+    "serialNumber": "HH-1010-PPPP",
+    "params": {
+      "machineTime": 10000,
       "downtime": 0,
-      "is running": 1,
-      "toggle exhaust ventilation": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
       "temperature": 100,
-      "RPM": 10000
+      "rpm": 10000
     },
-    "Warnings": {},
-    "Critical errors": {}
+    "warnings": {},
+    "criticalErrors": {}
   },
   "5": {
     "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "lathe",
-    "serial number": "LK-8900-IIII",
-    "Params": {
-      "machine time": 0,
+    "serialNumber": "LK-8900-IIII",
+    "params": {
+      "machineTime": 0,
       "downtime": 4000,
-      "is running": 0,
-      "toggle exhaust ventilation": 0,
+      "isRunning": 0,
+      "toggleExhaustVentilation": 0,
       "temperature": 25,
-      "RPM": 0
+      "rpm": 0
     },
-    "Warnings": {},
-    "Critical errors": {}
+    "warnings": {},
+    "criticalErrors": {}
   },
   "6": {
     "url": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
     "type": "rolling machine",
-    "serial number": "OP-2500-POIU",
-    "Params": {
-      "machine time": 25000,
+    "serialNumber": "OP-2500-POIU",
+    "params": {
+      "machineTime": 25000,
       "downtime": 0,
-      "is running": 1,
-      "toggle exhaust ventilation": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
       "temperature": 50,
-      "RPM": 2500
+      "rpm": 2500
     },
-    "Warnings": {
+    "warnings": {
       "0": "maintenance required"
     },
-    "Critical errors": {}
+    "criticalErrors": {}
   }
 }
