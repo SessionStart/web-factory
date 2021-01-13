@@ -1,0 +1,104 @@
+[
+  {
+    "id": 0,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+    "type": "milling cutter",
+    "serialNumber": "AA-9999-ZZZZ",
+    "params": {
+      "machineTime": 0,
+      "downtime": 5000,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 25,
+      "rpm": 0
+    },
+    "warnings": [
+       "raw is low"
+    ],
+    "criticalErrors": {}
+  },
+  {
+    "id": 1,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+    "type": "milling cutter",
+    "serialNumber": "BB-8888-ZZZZ",
+    "params": {
+      "machineTime": 1400,
+      "downtime": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 140,
+      "rpm": 5000
+    },
+    "warnings": [],
+    "criticalErrors": {}
+  },
+  {
+    "id": 2,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+    "type": "drill machine",
+    "serialNumber": "SS-8585-RRWW",
+    "params": {
+      "machineTime": 0,
+      "downtime": 5000,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 1,
+      "temperature": 400,
+      "rpm": 0
+    },
+    "warnings": [],
+    "criticalErrors": {
+      "0": "critical temperature"
+    }
+  },
+  {
+    "id": 3,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+    "type": "lathe",
+    "serialNumber": "HH-1010-PPPP",
+    "params": {
+      "machineTime": 10000,
+      "downtime": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 100,
+      "rpm": 10000
+    },
+    "warnings": [],
+    "criticalErrors": {}
+  },
+  {
+    "id": 4,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+    "type": "lathe",
+    "serialNumber": "LK-8900-IIII",
+    "params": {
+      "machineTime": 0,
+      "downtime": 4000,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 25,
+      "rpm": 0
+    },
+    "warnings": [],
+    "criticalErrors": {}
+  },
+  {
+    "id": 5,
+    "photoUrl": "https://i0.wp.com/rootsaid.com/wp-content/uploads/2017/11/s-l1000.jpg?w=1000",
+    "type": "rolling machine",
+    "serialNumber": "OP-2500-POIU",
+    "params": {
+      "machineTime": 25000,
+      "downtime": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 50,
+      "rpm": 2500
+    },
+    "warnings": [
+      "maintenance required"
+    ],
+    "criticalErrors": {}
+  }
+]

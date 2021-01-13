@@ -24,7 +24,7 @@ class LaunchBloc extends ChangeNotifier implements Initializeble {
       authStatus == AuthStatus.Authorized ? LaunchPages.Home : LaunchPages.Auth;
 
   @override
-  void init(BuildContext context) {
+  Future<void> init(BuildContext context) async {
     _userRepository.eventStream.listen((event) {
       if (event.type == UserRepositoryEventType.Crated) {
         notifyListeners();
