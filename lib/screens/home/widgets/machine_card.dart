@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:web_factory/blocs/theme_bloc.dart';
+import 'package:web_factory/models/machine.dart';
+import 'package:web_factory/theme/themes/mutual_theme.dart';
 import 'package:web_factory/widgets/common/custom_button.dart';
 import 'package:web_factory/widgets/common/image/custom_image.dart';
 
 class MachineCard extends StatelessWidget {
   const MachineCard({
     Key key,
+    @required this.machie,
   }) : super(key: key);
+
+  final Machine machie;
 
   @override
   Widget build(BuildContext context) {
@@ -18,60 +23,79 @@ class MachineCard extends StatelessWidget {
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(8.0)),
-        color: theme.cardColor,
-        boxShadow: customTheme.boxShadow,
+        color:  theme.cardColor,
+        boxShadow: machie?.params?.isRunning ? customTheme.boxShadow : listViewBoxShadow,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Column(
             children: [
-              Column(
-                children: [
-                  CustomNetworkImage(
-                    width: size.width * 0.1,
-                    height: 100,
-                    url:
-                        'https://ritm-magazine.ru/sites/default/files/stc_f2501.jpg',
-                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                  ),
-                  Container(
-                    width: 150,
-                    height: 50,
-                    alignment: Alignment.topCenter,
-                    padding: EdgeInsets.only(left: 15.0),
-                    child: Container(
-                      alignment: Alignment.topCenter,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                        child: Text(
-                          'Название',
-                          style: theme.textTheme.headline3,
-                        ),
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                        color: theme.accentColor,
-                        boxShadow: customTheme.listViewBoxShadow,
+              CustomNetworkImage(
+                width: size.width * 0.3,
+                height: 110,
+                url: machie?.photoUrl,
+                borderRadius: BorderRadius.all(Radius.circular(8.0)),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5).copyWith(bottom: 0.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.label,
+                      size: 18,
+                      color: machie?.params?.isRunning
+                          ? theme.primaryColor
+                          : alertColor,
+                    ),
+                    SizedBox(width: 5.0),
+                    Text(
+                      machie?.serialNumber,
+                      style: theme.textTheme.headline3.copyWith(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        color:  Colors.black,
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.label,
+                      size: 18,
+                      color: machie?.params?.isRunning
+                          ? theme.primaryColor
+                          : alertColor,
+                    ),
+                    SizedBox(width: 5.0),
+                    Text(
+                      machie?.type,
+                      style: theme.textTheme.headline3.copyWith(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        color:  Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
-          CustomButton(
-            height: 40,
-            width: double.infinity,
-            color: theme.accentColor,
-            child: Text(
-              'Остановить',
-              style: theme.textTheme.headline4,
+          if (machie?.params?.isRunning)
+            CustomButton(
+              height: 30,
+              width: double.infinity,
+              color: theme.accentColor,
+              child: Text(
+                'Остановить',
+                style: theme.textTheme.headline4,
+              ),
+              onPressed: () => print('stop button pressed'),
             ),
-            onPressed: () => print('stop button pressed'),
-          ),
         ],
       ),
     );
