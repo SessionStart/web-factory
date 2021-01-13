@@ -9,11 +9,11 @@ import 'package:provider/provider.dart';
 const smallPadding = EdgeInsets.all(35);
 
 class AuthScreen extends StatelessWidget {
-  const AuthScreen({Key key}) : super(key: key);
+  AuthScreen({Key key}) : super(key: key);
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
     final authBloc = Provider.of<AuthBloc>(context);
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -102,7 +102,9 @@ class AuthScreen extends StatelessWidget {
             'Войти',
             style: theme.textTheme.button,
           ),
-          onPressed: () => print('auth button pressed'),
+          onPressed: () {
+            authBloc.auth();
+          },
         ),
       ],
     );

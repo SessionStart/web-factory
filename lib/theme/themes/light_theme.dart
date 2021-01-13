@@ -6,7 +6,7 @@ final lightTheme = ThemeData(
   primarySwatch: Colors.indigo,
   primaryColor: primaryColor,
   backgroundColor: Color(0xFFFFFFFF),
-  scaffoldBackgroundColor: Color(0xFFFFFFFF),
+  scaffoldBackgroundColor: Color(0xFFF6F8FF),
   canvasColor: canvasColor,
   accentColor: accentColor,
   buttonColor: buttonColor,
@@ -27,6 +27,11 @@ final lightTheme = ThemeData(
       fontSize: 16,
       color: Colors.white,
       fontWeight: FontWeight.w400,
+    ),
+    headline5: TextStyle(
+      fontSize: 18,
+      color: Colors.black,
+      fontWeight: FontWeight.w600,
     ),
     button: TextStyle(
       fontSize: 20,

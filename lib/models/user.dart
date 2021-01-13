@@ -1,11 +1,13 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
+
 class User {
   final String userLogin;
   final String userPassword;
   User({
-    this.userLogin,
-    this.userPassword,
+    @required this.userLogin,
+    @required this.userPassword,
   });
 
   User copyWith({
