@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:web_factory/blocs/machines_bloc.dart';
 import 'package:web_factory/blocs/theme_bloc.dart';
 import 'package:web_factory/models/machine.dart';
 import 'package:web_factory/theme/themes/mutual_theme.dart';
@@ -19,6 +20,18 @@ class TitleHome extends StatelessWidget {
     final customTheme = Provider.of<ThemeBloc>(context).customTheme;
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
+    final bloc = Provider.of<MachinesBloc>(context);
+    if (machine == null) {
+      return Container(
+        height: 250,
+        margin: EdgeInsets.zero,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          color: theme.cardColor,
+          boxShadow: customTheme.boxShadow,
+        ),
+      );
+    }
     return Container(
       margin: EdgeInsets.zero,
       decoration: BoxDecoration(
@@ -35,7 +48,7 @@ class TitleHome extends StatelessWidget {
             CustomNetworkImage(
               width: size.width * 0.3,
               height: 200,
-              url: 'https://ritm-magazine.ru/sites/default/files/stc_f2501.jpg',
+              url: machine?.photoUrl,
               borderRadius: BorderRadius.all(Radius.circular(8.0)),
             ),
             SizedBox(width: 10),
@@ -97,7 +110,7 @@ class TitleHome extends StatelessWidget {
                           ),
                           SizedBox(width: 5.0),
                           Text(
-                            '${machine.params.machineTime}',
+                            _getMachineTime(bloc),
                             style: theme.textTheme.headline3.copyWith(
                               color: Colors.black,
                             ),
@@ -144,5 +157,15 @@ class TitleHome extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String _getMachineTime(MachinesBloc bloc){
+    if(machine.params.isRunning){
+      final time = (machine.params.machineTime + bloc.machineTime);
+      return
+        '${time ~/ 60} : ${time % 60}';
+    }
+      return '${machine.params.machineTime ~/ 60} : ${machine.params.machineTime % 60}';
+
   }
 }

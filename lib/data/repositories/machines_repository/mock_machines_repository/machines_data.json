@@ -23,7 +23,7 @@
     "type": "milling cutter",
     "serialNumber": "BB-8888-ZZZZ",
     "params": {
-      "machineTime": 1400,
+      "machineTime": 200,
       "downtime": 0,
       "isRunning": 1,
       "toggleExhaustVentilation": 0,
@@ -39,7 +39,7 @@
     "type": "drill machine",
     "serialNumber": "SS-8585-RRWW",
     "params": {
-      "machineTime": 0,
+      "machineTime": 1000,
       "downtime": 5000,
       "isRunning": 1,
       "toggleExhaustVentilation": 1,
@@ -57,7 +57,7 @@
     "type": "lathe",
     "serialNumber": "HH-1010-PPPP",
     "params": {
-      "machineTime": 10000,
+      "machineTime": 400,
       "downtime": 0,
       "isRunning": 1,
       "toggleExhaustVentilation": 0,
@@ -73,7 +73,7 @@
     "type": "lathe",
     "serialNumber": "LK-8900-IIII",
     "params": {
-      "machineTime": 0,
+      "machineTime": 600,
       "downtime": 4000,
       "isRunning": 1,
       "toggleExhaustVentilation": 0,
@@ -89,7 +89,7 @@
     "type": "rolling machine",
     "serialNumber": "OP-2500-POIU",
     "params": {
-      "machineTime": 25000,
+      "machineTime": 400,
       "downtime": 0,
       "isRunning": 1,
       "toggleExhaustVentilation": 0,

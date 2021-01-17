@@ -46,12 +46,17 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.zero,
               itemCount: bloc.machines.length,
               itemBuilder: (BuildContext context, int i) {
-                return Padding(
-                  padding: i != 0
-                      ? EdgeInsets.all(10.0)
-                      : EdgeInsets.all(10.0).copyWith(top: 0.0),
-                  child: MachineCard(
-                    machie: bloc.machines[i],
+                return GestureDetector(
+                  onTap: (){
+                    bloc.selectedMachineIndex = i;
+                  },
+                  child: Padding(
+                    padding: i != 0
+                        ? EdgeInsets.all(10.0)
+                        : EdgeInsets.all(10.0).copyWith(top: 0.0),
+                    child: MachineCard(
+                      machie: bloc.machines[i],
+                    ),
                   ),
                 );
               },
