@@ -30,8 +30,12 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TitleHome(),
-                MessagesCard(),
+                TitleHome(
+                  machine: bloc.selectedMachine,
+                ),
+                MessagesCard(
+                  machine: bloc.selectedMachine,
+                ),
               ],
             ),
           ),

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:web_factory/blocs/theme_bloc.dart';
-
-
+import 'package:web_factory/models/machine.dart';
 
 class MessagesCard extends StatelessWidget {
   const MessagesCard({
     Key key,
+    @required this.machine,
   }) : super(key: key);
+
+  final Machine machine;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,8 @@ class MessagesCard extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 10.0, bottom: 10.0),
-                  child: Text('Все сообщения',
+                  child: Text(
+                    'Все сообщения',
                     style: theme.textTheme.headline5,
                   ),
                 ),
@@ -67,11 +70,10 @@ class MessagesCard extends StatelessWidget {
                               Text(' | '),
                               Text('19:57:02'),
                               Text(' | '),
-                              Text('Иванов Иван'),],
+                              Text('Иванов Иван'),
+                            ],
                           ),
-                        ]
-                    )
-                ),
+                        ])),
               ],
             ),
           ],

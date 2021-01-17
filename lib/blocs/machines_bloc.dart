@@ -14,8 +14,19 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
   int _start = 60;
   static const _oneSec = const Duration(seconds: 1);
 
+  int _selectedMachineIndex = 0;
+
   List<Machine> machines = [];
   final AbstractMachinesRepository machinesRepository;
+  
+  Machine get selectedMachine => machines.isNotEmpty ? machines[_selectedMachineIndex] : null;
+
+  int get selectedMachineIndex => _selectedMachineIndex;
+
+  set selectedMachineIndex(int val){
+    _selectedMachineIndex = val;
+    notifyListeners();
+  }
 
   Future<void> loadMachines() async {
     machines = await machinesRepository.loadFromFile();
