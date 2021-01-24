@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:web_factory/blocs/machines_bloc.dart';
 import 'package:web_factory/blocs/theme_bloc.dart';
 import 'package:web_factory/models/machine.dart';
 import 'package:web_factory/theme/themes/mutual_theme.dart';
@@ -17,6 +18,7 @@ class MachineCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final customTheme = Provider.of<ThemeBloc>(context).customTheme;
+    final bloc = Provider.of<MachinesBloc>(context);
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
     return Container(
@@ -122,7 +124,7 @@ class MachineCard extends StatelessWidget {
               ),
             ],
           ),
-          if (machie?.params?.isRunning)
+          if (machie?.params?.isRunning && !machie?.isStopped)
             CustomButton(
               height: 30,
               width: double.infinity,
@@ -131,7 +133,18 @@ class MachineCard extends StatelessWidget {
                 'Остановить',
                 style: theme.textTheme.headline4,
               ),
-              onPressed: () => print('stop button pressed'),
+              onPressed: () => bloc.stopMachine(machie),
+            ),
+          if (machie?.params?.isRunning && machie?.isStopped)
+            CustomButton(
+              height: 30,
+              width: double.infinity,
+              color: theme.accentColor,
+              child: Text(
+                'Запустить',
+                style: theme.textTheme.headline4,
+              ),
+              onPressed: () => bloc.startMachine(machie),
             ),
         ],
       ),

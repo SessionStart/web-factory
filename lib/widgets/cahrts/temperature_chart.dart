@@ -20,6 +20,7 @@ class TemperatureChart extends StatelessWidget {
     );
   }
 
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -31,20 +32,17 @@ class TemperatureChart extends StatelessWidget {
   }
 
   /// Create one series with sample hard coded data.
-  static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData(
-      MachinesBloc machinesBloc, BuildContext context) {
+  static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData(MachinesBloc machinesBloc, BuildContext context) {
     final theme = Theme.of(context);
-    final data = machinesBloc.machines
-        .map(
-          (e) => TimeSeriesSales(new DateTime.now().add(Duration(days: e.id)),
-              e.params.temperature),
-        )
-        .toList();
+    final data =      machinesBloc.machines.map((e) =>
+        TimeSeriesSales(new DateTime.now().add(Duration(days: e.id)), e.params.temperature),
+    ).toList();
 
     return [
       charts.Series<TimeSeriesSales, DateTime>(
         id: 'Sales',
-        colorFn: (_, __) => charts.ColorUtil.fromDartColor(theme.accentColor),
+        colorFn: (_, __) =>
+            charts.ColorUtil.fromDartColor(theme.accentColor),
         domainFn: (TimeSeriesSales sales, _) => sales.time,
         measureFn: (TimeSeriesSales sales, _) => sales.sales,
         data: data,

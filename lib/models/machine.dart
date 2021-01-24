@@ -11,6 +11,7 @@ class Machine {
   final String serialNumber;
   final MachineParams params;
   final List<String> warnings;
+  final bool isStopped;
 
   Machine({
     @required this.id,
@@ -19,6 +20,7 @@ class Machine {
     @required this.serialNumber,
     @required this.params,
     @required this.warnings,
+    this.isStopped = false,
   });
 
   Machine copyWith({
@@ -28,6 +30,7 @@ class Machine {
     String serialNumber,
     MachineParams params,
     List<String> warnings,
+    bool isStopped,
   }) {
     return Machine(
       id: id ?? this.id,
@@ -36,6 +39,7 @@ class Machine {
       serialNumber: serialNumber ?? this.serialNumber,
       params: params ?? this.params,
       warnings: warnings ?? this.warnings,
+      isStopped: isStopped ?? this.isStopped,
     );
   }
 

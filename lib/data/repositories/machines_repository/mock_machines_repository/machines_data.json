@@ -5,7 +5,7 @@
     "type": "milling cutter",
     "serialNumber": "AA-9999-ZZZZ",
     "params": {
-      "machineTime": 0,
+      "machineTime": 400,
       "downtime": 5000,
       "isRunning": 1,
       "toggleExhaustVentilation": 0,

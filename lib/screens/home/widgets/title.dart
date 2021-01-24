@@ -148,7 +148,7 @@ class TitleHome extends StatelessWidget {
                       'Остановить',
                       style: theme.textTheme.button.copyWith(fontSize: 18),
                     ),
-                    onPressed: () => print('stop button pressed'),
+                    onPressed: () => bloc.stopMachine(machine),
                   )
                 ],
               ),
@@ -160,7 +160,7 @@ class TitleHome extends StatelessWidget {
   }
 
   String _getMachineTime(MachinesBloc bloc){
-    if(machine.params.isRunning){
+    if(machine.params.isRunning && ! machine.isStopped){
       final time = (machine.params.machineTime + bloc.machineTime);
       return
         '${time ~/ 60} : ${time % 60}';

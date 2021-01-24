@@ -27,6 +27,7 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
       machines.isNotEmpty ? machines[_selectedMachineIndex] : null;
 
   int get selectedMachineIndex => _selectedMachineIndex;
+
   int get machineTime => _machineTime;
 
   set selectedMachineIndex(int val) {
@@ -39,26 +40,38 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
     notifyListeners();
   }
 
-  updateMachine(Machine machine) {
+  void updateMachine(Machine machine) {
     final i = machines.indexWhere((m) => m.id == machine.id);
     machines[i] = machine;
     notifyListeners();
   }
 
-  crashMachineByIndex(int i) {
+  void crashMachineByIndex(int i) {
     machines[i] = machines[i]
         .copyWith(params: machines[i].params.copyWith(isRunning: false));
     notifyListeners();
   }
 
-  crashMachine(Machine machine) {
+  void crashMachine(Machine machine) {
     final i = machines.indexWhere((m) => m.id == machine.id);
     machines[i] = machines[i]
         .copyWith(params: machines[i].params.copyWith(isRunning: false));
     notifyListeners();
   }
 
-  runMachine(Machine machine) {
+  void stopMachine(Machine machine) {
+    final i = machines.indexWhere((m) => m.id == machine.id);
+    machines[i] = machines[i].copyWith(isStopped: true);
+    notifyListeners();
+  }
+
+  void startMachine(Machine machine) {
+    final i = machines.indexWhere((m) => m.id == machine.id);m
+    machines[i] = machines[i].copyWith(isStopped: false);
+    notifyListeners();
+  }
+
+  void runMachine(Machine machine) {
     final i = machines.indexWhere((m) => m.id == machine.id);
     machines[i] = machines[i]
         .copyWith(params: machines[i].params.copyWith(isRunning: true));
@@ -94,9 +107,9 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
         machines.forEach((e) {
           updateMachine(e.copyWith(
               params: e.params.copyWith(
-                  temperature: e.params.temperature + _getRandomDelta(e.params.temperature),
-              )
-          ));
+            temperature:
+                e.params.temperature + _getRandomDelta(e.params.temperature),
+          )));
         });
         notifyListeners();
         if (_machineStart == 0) {
@@ -108,9 +121,15 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
     );
   }
 
-  int _getRandomDelta(int temperature){
+  int _getRandomDelta(int temperature) {
     final rnd = Random();
     final num = rnd.nextInt(10);
-    return (temperature >= 60 && temperature < 100) ? - num : (temperature >= 30 && temperature < 60) ? num : (temperature >= 100) ? - temperature ~/2 : temperature ~/2 ;
+    return (temperature >= 60 && temperature < 100)
+        ? -num
+        : (temperature >= 30 && temperature < 60)
+            ? num
+            : (temperature >= 100)
+                ? -temperature ~/ 2
+                : temperature ~/ 2;
   }
 }
