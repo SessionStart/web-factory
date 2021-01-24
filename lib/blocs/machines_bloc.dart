@@ -66,7 +66,7 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
   }
 
   void startMachine(Machine machine) {
-    final i = machines.indexWhere((m) => m.id == machine.id);m
+    final i = machines.indexWhere((m) => m.id == machine.id);
     machines[i] = machines[i].copyWith(isStopped: false);
     notifyListeners();
   }
