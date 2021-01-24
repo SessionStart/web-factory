@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:web_factory/data/repositories/machines_repository/repository.dart';
@@ -90,6 +91,13 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
       _oneSec,
       (Timer timer) {
         _machineTime += 1;
+        machines.forEach((e) {
+          updateMachine(e.copyWith(
+              params: e.params.copyWith(
+                  temperature: e.params.temperature + _getRandomDelta(e.params.temperature),
+              )
+          ));
+        });
         notifyListeners();
         if (_machineStart == 0) {
           timer.cancel();
@@ -98,5 +106,11 @@ class MachinesBloc extends ChangeNotifier implements Initializeble {
         }
       },
     );
+  }
+
+  int _getRandomDelta(int temperature){
+    final rnd = Random();
+    final num = rnd.nextInt(10);
+    return (temperature >= 60 && temperature < 100) ? - num : (temperature >= 30 && temperature < 60) ? num : (temperature >= 100) ? - temperature ~/2 : temperature ~/2 ;
   }
 }

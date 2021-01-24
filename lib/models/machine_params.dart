@@ -19,7 +19,7 @@ class MachineParams {
     int machineTime,
     int downtime,
     bool isRunning,
-    bool temperature,
+    int temperature,
   }) {
     return MachineParams(
       machineTime: machineTime ?? this.machineTime,
