@@ -1,0 +1,104 @@
+[
+  {
+    "id": 0,
+    "photoUrl": "https://www.jettools.ru/upload/iblock/68c/jet_jmd_x1l_frezerno_sverlilnyy_stanok.jpg",
+    "type": "milling cutter",
+    "serialNumber": "AA-9999-ZZZZ",
+    "params": {
+      "machineTime": 400,
+      "downtime": 5000,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 25,
+      "rpm": 0
+    },
+    "warnings": [
+       "raw is low"
+    ],
+    "criticalErrors": {}
+  },
+  {
+    "id": 1,
+    "photoUrl": "https://www.jettools.ru/upload/iblock/68c/jet_jmd_x1l_frezerno_sverlilnyy_stanok.jpg",
+    "type": "milling cutter",
+    "serialNumber": "BB-8888-ZZZZ",
+    "params": {
+      "machineTime": 200,
+      "downtime": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 140,
+      "rpm": 5000
+    },
+    "warnings": [],
+    "criticalErrors": {}
+  },
+  {
+    "id": 2,
+    "photoUrl": "https://st23.stpulscen.ru/images/product/297/941/682_big.jpg",
+    "type": "drill machine",
+    "serialNumber": "SS-8585-RRWW",
+    "params": {
+      "machineTime": 1000,
+      "downtime": 5000,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 1,
+      "temperature": 400,
+      "rpm": 0
+    },
+    "warnings": [],
+    "criticalErrors": {
+      "0": "critical temperature"
+    }
+  },
+  {
+    "id": 3,
+    "photoUrl": "https://www.precisionmatthews.com/wp-content/uploads/2017/01/PM-1127right-view.jpg",
+    "type": "lathe",
+    "serialNumber": "HH-1010-PPPP",
+    "params": {
+      "machineTime": 400,
+      "downtime": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 100,
+      "rpm": 10000
+    },
+    "warnings": [],
+    "criticalErrors": {}
+  },
+  {
+    "id": 4,
+    "photoUrl": "https://www.precisionmatthews.com/wp-content/uploads/2017/01/PM-1127right-view.jpg",
+    "type": "lathe",
+    "serialNumber": "LK-8900-IIII",
+    "params": {
+      "machineTime": 600,
+      "downtime": 4000,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 25,
+      "rpm": 0
+    },
+    "warnings": [],
+    "criticalErrors": {}
+  },
+  {
+    "id": 5,
+    "photoUrl": "https://www.freelancejob.ru/upload/432/37662778655067.png",
+    "type": "rolling machine",
+    "serialNumber": "OP-2500-POIU",
+    "params": {
+      "machineTime": 400,
+      "downtime": 0,
+      "isRunning": 1,
+      "toggleExhaustVentilation": 0,
+      "temperature": 50,
+      "rpm": 2500
+    },
+    "warnings": [
+      "maintenance required"
+    ],
+    "criticalErrors": {}
+  }
+]
